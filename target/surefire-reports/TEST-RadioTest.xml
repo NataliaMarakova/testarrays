@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="RadioTest" time="0.017" tests="22" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="RadioTest" time="0.015" tests="23" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="C:\Users\nathe\.jdks\corretto-11.0.18\bin"/>
-    <property name="sun.java.command" value="C:\Users\nathe\AppData\Local\Temp\surefire10674946335914527987\surefirebooter6552825130673611197.jar C:\Users\nathe\AppData\Local\Temp\surefire10674946335914527987 2023-04-21T22-03-49_135-jvmRun1 surefire10225092877931623028tmp surefire_011799062241944038986tmp"/>
+    <property name="sun.java.command" value="C:\Users\nathe\AppData\Local\Temp\surefire1051924427927205045\surefirebooter10804830066485079352.jar C:\Users\nathe\AppData\Local\Temp\surefire1051924427927205045 2023-04-25T21-05-44_284-jvmRun1 surefire18162082613355096362tmp surefire_09347143078781981010tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\IDEA Projects\arraystemperatures\target\test-classes;C:\IDEA Projects\arraystemperatures\target\classes;C:\Users\nathe\.m2\repository\org\junit\jupiter\junit-jupiter\5.7.0\junit-jupiter-5.7.0.jar;C:\Users\nathe\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\nathe\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\nathe\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\nathe\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\nathe\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.7.0\junit-jupiter-params-5.7.0.jar;C:\Users\nathe\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\nathe\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\nathe\AppData\Local\Temp\surefire10674946335914527987\surefirebooter6552825130673611197.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\nathe\AppData\Local\Temp\surefire1051924427927205045\surefirebooter10804830066485079352.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.18+10-LTS"/>
@@ -67,6 +67,7 @@
   <testcase name="prevStationTest1" classname="RadioTest" time="0"/>
   <testcase name="prevStationTest2" classname="RadioTest" time="0"/>
   <testcase name="lowerVolumeOne" classname="RadioTest" time="0"/>
+  <testcase name="numberOfStationsTest" classname="RadioTest" time="0"/>
   <testcase name="lowerVolumeBelowZero" classname="RadioTest" time="0"/>
   <testcase name="increaseVolume99" classname="RadioTest" time="0"/>
   <testcase name="currentStationNine" classname="RadioTest" time="0"/>
@@ -74,13 +75,13 @@
   <testcase name="increaseVolumeAbove100" classname="RadioTest" time="0"/>
   <testcase name="lowerVolumeTest" classname="RadioTest" time="0"/>
   <testcase name="lowerVolumeZero" classname="RadioTest" time="0"/>
-  <testcase name="currentStationMax" classname="RadioTest" time="0"/>
+  <testcase name="currentStationMax" classname="RadioTest" time="0.001"/>
   <testcase name="currentStationOne" classname="RadioTest" time="0.001"/>
-  <testcase name="currentStationTen" classname="RadioTest" time="0"/>
+  <testcase name="currentStationTen" classname="RadioTest" time="0.001"/>
   <testcase name="currentVolumeBetweenMinAndMax" classname="RadioTest" time="0"/>
   <testcase name="increaseVolumeTest" classname="RadioTest" time="0.001"/>
   <testcase name="currentStationEight" classname="RadioTest" time="0.001"/>
-  <testcase name="nextStationTest1" classname="RadioTest" time="0.001"/>
-  <testcase name="nextStationTest2" classname="RadioTest" time="0.002"/>
-  <testcase name="currentStationAboveMax" classname="RadioTest" time="0.002"/>
+  <testcase name="nextStationTest1" classname="RadioTest" time="0"/>
+  <testcase name="nextStationTest2" classname="RadioTest" time="0"/>
+  <testcase name="currentStationAboveMax" classname="RadioTest" time="0.001"/>
 </testsuite>

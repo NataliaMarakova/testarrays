@@ -1,71 +1,81 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Radio.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">findmax</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Radio.java</span></div><h1>Radio.java</h1><pre class="source lang-java linenums"><span class="fc" id="L1">public class Radio {</span>
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Radio.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">findmax</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Radio.java</span></div><h1>Radio.java</h1><pre class="source lang-java linenums">public class Radio {
     private int currentStation;
     private int currentVolume;
+    private int maxStation;
+
+<span class="fc" id="L6">    public Radio() {</span>
+<span class="fc" id="L7">        this.maxStation = 9;</span>
+
+<span class="fc" id="L9">    }</span>
+
+<span class="fc" id="L11">    public Radio(int numberOfStations) {</span>
+<span class="fc" id="L12">        this.maxStation = numberOfStations - 1;</span>
+<span class="fc" id="L13">    }</span>
 
     public int getCurrentStation() {
-<span class="fc" id="L6">        return currentStation;</span>
+<span class="fc" id="L16">        return currentStation;</span>
     }
 
     public void setCurrentStation(int currentStation) {
-<span class="fc bfc" id="L10" title="All 2 branches covered.">        if (currentStation &lt; 0) {</span>
-<span class="fc" id="L11">            return;</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">        if (currentStation &lt; 0) {</span>
+<span class="fc" id="L21">            return;</span>
         }
-<span class="fc bfc" id="L13" title="All 2 branches covered.">        if (currentStation &gt; 9) {</span>
-<span class="fc" id="L14">            return;</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">        if (currentStation &gt; 9) {</span>
+<span class="fc" id="L24">            return;</span>
         }
-<span class="fc" id="L16">        this.currentStation = currentStation;</span>
-<span class="fc" id="L17">    }</span>
+<span class="fc" id="L26">        this.currentStation = currentStation;</span>
+<span class="fc" id="L27">    }</span>
 
     public int getCurrentVolume() {
-<span class="fc" id="L20">        return currentVolume;</span>
+<span class="fc" id="L30">        return currentVolume;</span>
     }
 
     public void setCurrentVolume(int currentVolume) {
-<span class="fc bfc" id="L24" title="All 2 branches covered.">        if (currentVolume &lt; 0) {</span>
-<span class="fc" id="L25">            return;</span>
+<span class="fc bfc" id="L34" title="All 2 branches covered.">        if (currentVolume &lt; 0) {</span>
+<span class="fc" id="L35">            return;</span>
         }
-<span class="fc bfc" id="L27" title="All 2 branches covered.">        if (currentVolume &gt; 100) {</span>
-<span class="fc" id="L28">            return;</span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">        if (currentVolume &gt; 100) {</span>
+<span class="fc" id="L38">            return;</span>
         }
-<span class="fc" id="L30">        this.currentVolume = currentVolume;</span>
-<span class="fc" id="L31">    }</span>
+<span class="fc" id="L40">        this.currentVolume = currentVolume;</span>
+<span class="fc" id="L41">    }</span>
 
     public void nextStation() {
-<span class="fc bfc" id="L34" title="All 2 branches covered.">        if (currentStation != 9) {</span>
-<span class="fc" id="L35">            currentStation++;</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">        if (currentStation != maxStation) {</span>
+<span class="fc" id="L45">            currentStation++;</span>
         } else {
-<span class="fc" id="L37">            currentStation = 0;</span>
+<span class="fc" id="L47">            currentStation = 0;</span>
         }
-<span class="fc" id="L39">    }</span>
+<span class="fc" id="L49">    }</span>
 
         public void prevStation() {
-<span class="fc bfc" id="L42" title="All 2 branches covered.">            if (currentStation != 0) {</span>
-<span class="fc" id="L43">                currentStation--;</span>
+<span class="fc bfc" id="L52" title="All 2 branches covered.">            if (currentStation != 0) {</span>
+<span class="fc" id="L53">                currentStation--;</span>
             } else {
-<span class="fc" id="L45">                currentStation = 9;</span>
+<span class="fc" id="L55">                currentStation = maxStation;</span>
             }
-<span class="fc" id="L47">    }</span>
+<span class="fc" id="L57">    }</span>
 
 
 
 
     public void increaseVolume() {
-<span class="fc bfc" id="L53" title="All 2 branches covered.">        if (currentVolume &lt; 100) {</span>
-<span class="fc" id="L54">            currentVolume = currentVolume + 1;</span>
+<span class="fc bfc" id="L63" title="All 2 branches covered.">        if (currentVolume &lt; 100) {</span>
+<span class="fc" id="L64">            currentVolume = currentVolume + 1;</span>
             } else {
-<span class="fc" id="L56">            currentVolume = 100;</span>
+<span class="fc" id="L66">            currentVolume = 100;</span>
         }
-<span class="fc" id="L58">        }</span>
+<span class="fc" id="L68">        }</span>
 
     public void lowerVolume() {
-<span class="fc bfc" id="L61" title="All 2 branches covered.">        if (currentVolume &gt; 0) {</span>
-<span class="fc" id="L62">            currentVolume = currentVolume - 1;</span>
+<span class="fc bfc" id="L71" title="All 2 branches covered.">        if (currentVolume &gt; 0) {</span>
+<span class="fc" id="L72">            currentVolume = currentVolume - 1;</span>
         } else {
-<span class="fc" id="L64">            currentVolume = 0;</span>
+<span class="fc" id="L74">            currentVolume = 0;</span>
         }
-<span class="fc" id="L66">    }</span>
+<span class="fc" id="L76">    }</span>
 
-    //public void maxVolume() {
+    // public void maxVolume() {
     //    if (currentVolume == 100) {
      //       return;
    //     }
